@@ -1,9 +1,12 @@
+ishikopath = envvar("ISHIKO");
+import $(ishikopath)/WindowsRegistry/Include/Ishiko/WindowsRegistry.bkl;
+
 toolsets = vs2015 vs2013;
 
 vs2015.solutionfile = ../VC14/IshikoFileTypes.sln;
 vs2013.solutionfile = ../VC12/IshikoFileTypes.sln;
 
-library IshikoFileTypes
+library IshikoFileTypes : IshikoWindowsRegistry
 {
     archs = x86 x86_64;
 
