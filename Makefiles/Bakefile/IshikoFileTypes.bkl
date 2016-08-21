@@ -19,5 +19,9 @@ library IshikoFileTypes
     headers
     {
         ../../Include/Ishiko/FileTypes.h
+
+        ../../Include/Ishiko/FileTypes/ExtensionRegistryInfo.h
+        ../../Include/Ishiko/FileTypes/FileTypeAssociations.h
+        ../../Include/Ishiko/FileTypes/ProgIDRegistryInfo.h
     }
 }

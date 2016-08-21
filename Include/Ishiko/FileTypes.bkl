@@ -1,0 +1,12 @@
+setting ISHIKO_FILETYPES_ROOT
+{
+    help = "Path to the Ishiko FileTypes installation";
+    default = '$(ISHIKO)/FileTypes';
+}
+
+template IshikoFileTypes
+{
+    includedirs += $(ISHIKO_FILETYPES_ROOT)/Include;
+
+    libdirs += $(ISHIKO_FILETYPES_ROOT)/Lib/$(arch);
+}

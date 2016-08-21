@@ -20,5 +20,14 @@
     <ClInclude Include="..\..\Include\Ishiko\FileTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Include\Ishiko\FileTypes\ExtensionRegistryInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Ishiko\FileTypes\FileTypeAssociations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Ishiko\FileTypes\ProgIDRegistryInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
