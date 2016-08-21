@@ -150,6 +150,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\ExtensionRegistryInfo.cpp" />
+    <ClCompile Include="..\..\Source\FileTypeAssociations.cpp" />
+    <ClCompile Include="..\..\Source\ProgIDRegistryInfo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\..\Include\Ishiko\FileTypes.h" />
     <ClInclude Include="..\..\Include\Ishiko\FileTypes\ExtensionRegistryInfo.h" />
     <ClInclude Include="..\..\Include\Ishiko\FileTypes\FileTypeAssociations.h" />

@@ -24,4 +24,11 @@ library IshikoFileTypes
         ../../Include/Ishiko/FileTypes/FileTypeAssociations.h
         ../../Include/Ishiko/FileTypes/ProgIDRegistryInfo.h
     }
+
+    sources
+    {
+        ../../Source/ExtensionRegistryInfo.cpp
+        ../../Source/FileTypeAssociations.cpp
+        ../../Source/ProgIDRegistryInfo.cpp
+    }
 }
