@@ -23,6 +23,7 @@ library IshikoFileTypes : IshikoWindowsRegistry
     {
         ../../Include/Ishiko/FileTypes.h
 
+        ../../Include/Ishiko/FileTypes/linkoptions.h
         ../../Include/Ishiko/FileTypes/ExtensionRegistryInfo.h
         ../../Include/Ishiko/FileTypes/FileTypeAssociations.h
         ../../Include/Ishiko/FileTypes/ProgIDRegistryInfo.h

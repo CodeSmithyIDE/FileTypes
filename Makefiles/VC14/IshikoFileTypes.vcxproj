@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Include\Ishiko\FileTypes.h" />
+    <ClInclude Include="..\..\Include\Ishiko\FileTypes\linkoptions.h" />
     <ClInclude Include="..\..\Include\Ishiko\FileTypes\ExtensionRegistryInfo.h" />
     <ClInclude Include="..\..\Include\Ishiko\FileTypes\FileTypeAssociations.h" />
     <ClInclude Include="..\..\Include\Ishiko\FileTypes\ProgIDRegistryInfo.h" />

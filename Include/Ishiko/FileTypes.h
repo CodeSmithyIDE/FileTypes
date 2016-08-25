@@ -25,10 +25,6 @@
 
 #include "FileTypes/FileTypeAssociations.h"
 
-#ifdef _DEBUG
-#pragma comment(lib, "IshikoFileTypes-d.lib")
-#else
-#pragma comment(lib, "IshikoFileTypes.lib")
-#endif
+#include "linkoptions.h"
 
 #endif
