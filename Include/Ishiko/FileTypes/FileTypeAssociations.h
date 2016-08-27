@@ -39,7 +39,7 @@ public:
         const std::string& progID);
     static void removeExtensionRegistryInfo(const std::string& extension);
     static ExtensionRegistryInfo openExtensionRegistryInfo(const std::string& extension);
-
+    
     static ProgIDRegistryInfo createProgIDRegistryInfo(const std::string& progID,
         const std::string& applicationName);
     static void removeProgIDRegistryInfo(const std::string& progID);

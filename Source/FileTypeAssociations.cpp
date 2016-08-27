@@ -40,7 +40,7 @@ ExtensionRegistryInfo FileTypeAssociations::createExtensionRegistryInfo(const st
 void FileTypeAssociations::removeExtensionRegistryInfo(const std::string& extension)
 {
     std::string subKeyPath = "Software\\Classes\\" + extension;
-    WindowsRegistry::Registry::deleteSubKey(HKEY_CURRENT_USER, subKeyPath);
+    WindowsRegistry::Registry::deleteSubKey(HKEY_CURRENT_USER, subKeyPath, true);
 }
 
 ExtensionRegistryInfo FileTypeAssociations::openExtensionRegistryInfo(const std::string& extension)
@@ -64,7 +64,7 @@ ProgIDRegistryInfo FileTypeAssociations::createProgIDRegistryInfo(const std::str
 void FileTypeAssociations::removeProgIDRegistryInfo(const std::string& progID)
 {
     std::string subKeyPath = "Software\\Classes\\" + progID;
-    WindowsRegistry::Registry::deleteSubKey(HKEY_CURRENT_USER, subKeyPath);
+    WindowsRegistry::Registry::deleteSubKey(HKEY_CURRENT_USER, subKeyPath, true);
 }
 
 ProgIDRegistryInfo FileTypeAssociations::openProgIDRegistryInfo(const std::string& progID)
