@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2015-2016 Xavier Leclercq
+    Copyright (c) 2015-2017 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -30,22 +30,56 @@ namespace Ishiko
 namespace FileTypes
 {
 
+/// This class provides functions to manipulate the registry information for a file extension.
+/**
+    Use the functions in FileTypeAssociations to create instances of this class.
+
+    @see FileTypeAssociations
+*/
 class ExtensionRegistryInfo
 {
     friend class FileTypeAssociations;
 
 public:
-    typedef std::shared_ptr<ExtensionRegistryInfo> shared_ptr;
-
-public:
+    /// The destructor.
+    /**
+        Destruction of the object has no effect on the registry
+        itself.
+    */
     ~ExtensionRegistryInfo();
 
+    /// Returns the ProgID for this extension.
+    /**
+        This returns the default value for the registry key. The
+        application name of the ProgID in there will be used 
+        to populate the type field in the file explorer for files
+        with this extension.
+        @return The ProgID for this extension.
+        @see ProgIDRegistryInfo::applicationName
+    */
     std::string progID() const;
 
+    /// Gets the list of applications that can be used to open files with this extension.
+    /**
+        The applications in this list will be shown in the "Open with" menu when the user 
+        right-clicks on a file with this extension.
+        @param progIDs When the function returns this vector will be populated with the list
+          of applications that can be used to open files with this extension.
+    */
     void getOpenWithProgids(std::vector<std::string>& progIDs);
+    /// Adds an application to the list of applications that can be used to open files with this extension.
+    /**
+        @param progID The ProgID of the application that will be added to the list.
+    */
     void addOpenWithProgids(const std::string& progID);
 
 private:
+    /// Creates a new ExtensionRegistryInfo instance.
+    /**
+        The constructor is only supposed to be called by the 
+        FileTypeAssociations class.
+        @param key The registry subkey that this class will manipulate.
+    */
     ExtensionRegistryInfo(WindowsRegistry::Key& key);
 
 private:
