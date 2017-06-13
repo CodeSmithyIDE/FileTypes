@@ -73,6 +73,12 @@ public:
     */
     void addOpenWithProgids(const std::string& progID);
 
+    /// Allow files with this extension to be created from the New context menu in the file explorer.
+    /**
+        This function adds a ShellNew subkey to the extension registry key.
+    */
+    void addShellNew();
+
 private:
     /// Creates a new ExtensionRegistryInfo instance.
     /**
