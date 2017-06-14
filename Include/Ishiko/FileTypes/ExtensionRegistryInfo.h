@@ -79,6 +79,7 @@ public:
         This function adds a ShellNew subkey to the extension registry key.
     */
     void addShellNew();
+    void removeShellNew();
 
 private:
     /// Creates a new ExtensionRegistryInfo instance.

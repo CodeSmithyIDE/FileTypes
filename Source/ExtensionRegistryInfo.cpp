@@ -82,6 +82,18 @@ void ExtensionRegistryInfo::addShellNew()
     key.setValue("NullFile", "");
 }
 
+void ExtensionRegistryInfo::removeShellNew()
+{
+    WindowsRegistry::KeyPath path = m_key.path();
+    path.appendPath("ShellNew");
+
+    HKEY hive;
+    std::string subKeyPath;
+    path.splitInHiveAndSubKey(hive, subKeyPath);
+
+    WindowsRegistry::Registry::deleteSubKey(hive, subKeyPath, true);
+}
+
 ExtensionRegistryInfo::ExtensionRegistryInfo(WindowsRegistry::Key& key)
     : m_key(key)
 {
