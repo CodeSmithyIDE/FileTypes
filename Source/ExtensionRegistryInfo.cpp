@@ -58,6 +58,24 @@ void ExtensionRegistryInfo::addOpenWithProgids(const std::string& progID)
     key.setValue(progID, "");
 }
 
+bool ExtensionRegistryInfo::hasShellNew()
+{
+    bool result = false;
+    try
+    {
+        WindowsRegistry::Key key = WindowsRegistry::Registry::openSubKey(m_key, "ShellNew");
+        result = key.hasValue("NullFile");
+    }
+    catch (const WindowsRegistry::KeyOperationException& e)
+    {
+        if (e.windowsErrorCode() != ERROR_FILE_NOT_FOUND)
+        {
+            throw;
+        }
+    }
+    return result;
+}
+
 void ExtensionRegistryInfo::addShellNew()
 {
     WindowsRegistry::Key key = WindowsRegistry::Registry::createSubKey(m_key, "ShellNew");
