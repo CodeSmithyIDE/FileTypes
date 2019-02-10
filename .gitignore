@@ -1,8 +1,9 @@
 *.dll
+*.opendb
 *.opensdf
 *.sdf
 *.suo
-*.opendb
+.vs/
 Debug/
 Release/
 Lib/
